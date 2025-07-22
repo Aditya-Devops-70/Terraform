@@ -1,0 +1,11 @@
+variable "project_id" {}
+variable "region" {}
+variable "db_instance_name" {}
+variable "db_tier" {}
+variable "db_version" {}
+variable "db_user" {}
+variable "db_password" {}
+variable "db_name" {}
+variable "db_private_network" {}
+variable "disk_size" {}
+variable "disk_type" {}

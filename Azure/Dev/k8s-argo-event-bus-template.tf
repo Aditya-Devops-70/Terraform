@@ -1,0 +1,18 @@
+
+
+data "template_file" "event-bus-template" {
+  template = <<EOF
+apiVersion: argoproj.io/v1alpha1
+kind: EventBus
+metadata:
+  name: default
+  namespace: ${var.NAMESPACE}
+spec:
+  nats:
+    native:
+      # Optional, defaults to 3. If it is < 3, set it to 3, that is the minimal requirement.
+      replicas: 3
+      # Optional, authen strategy, "none" or "token", defaults to "none"
+      auth: none
+EOF
+}
